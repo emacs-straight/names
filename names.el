@@ -61,7 +61,7 @@
       "Load autoloaded definition DEF from function named NAME."
       (unless (load (cadr def) 'noerror)
         (error "Macro `%s' is autoloaded, but its file (%s) couldn't be loaded"
-               name (cadr def)))
+          name (cadr def)))
       (symbol-function name))
 
     (lambda (f prop &rest _)
